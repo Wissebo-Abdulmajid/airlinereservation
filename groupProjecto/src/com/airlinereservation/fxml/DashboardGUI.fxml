@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:controller="com.airlinereservation.controller.DashboardGUIController" xmlns:fx="http://javafx.com/fxml">
+    <Label fx:id="welcomeLabel" styleClass="title-label" />
+    
+    <HBox spacing="10">
+        <Label styleClass="section-label">Add Flight</Label>
+        <TextField fx:id="flightNumberTextField" promptText="Flight Number" />
+        <TextField fx:id="flightDestinationTextField" promptText="Destination" />
+        <TextField fx:id="flightDepartureTextField" promptText="Departure" />
+        <Button text="Add" onAction="#addFlight" />
+    </HBox>
+    
+    <HBox spacing="10">
+        <Label styleClass="section-label">Delete Flight</Label>
+        <TextField fx:id="flightNumberDeleteTextField" promptText="Flight Number" />
+        <Button text="Delete" onAction="#deleteFlight" />
+    </HBox>
+    
+    <HBox spacing="10">
+        <Label styleClass="section-label">View Customers</Label>
+        <Button text="View" onAction="#viewCustomers" />
+    </HBox>
+    
+    <TableView fx:id="flightsTableView">
+        <!-- Define columns for the table view -->
+    </TableView>
+</VBox>
